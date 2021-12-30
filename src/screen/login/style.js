@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignContent: 'center',
-        backgroundColor: Color.azure
+        backgroundColor: Color.ivory
     },
     input: {
         marginHorizontal: 20,
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     titleText: {
-        textAlign: 'center',
-        fontSize: 24,
+        margin: 20,
+        fontSize: 30,
         paddingVertical: 2,
         marginBottom: 10,
     },
@@ -29,8 +29,14 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: Color.azure,
-        borderRadius: 10,
+        borderColor: Color.aliceblue,
+        backgroundColor: Color.lavender,
+        borderRadius: 4,
+    },
+    btnText: {
+        fontSize: 18,
+        textAlign: 'center',
+        fontWeight : 'bold'
     },
 })
 
