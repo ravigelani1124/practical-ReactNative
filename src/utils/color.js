@@ -6,6 +6,7 @@ const Color = {
     aqua: '#00ffff',
     azure: '#f0ffff',
     lavender: '#e6e6fa',
+    lavenderDark: '#B57EDC',
     ivory:'#fffff0'
 }
 

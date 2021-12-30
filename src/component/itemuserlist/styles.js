@@ -3,29 +3,37 @@ import Color from "../../utils/color"
 
 const styles = StyleSheet.create({
     userContainer: {
+        
+        marginTop: 10,
+        marginStart: 20,
+        marginEnd: 20,
+        padding: 15,
+        marginBottom: 5,
         flexDirection: 'row',
-        marginHorizontal: 20,
-        paddingVertical: 10,
-        marginVertical: 5
+        borderWidth: 1,
+        borderColor: Color.lavenderDark,
+        backgroundColor: Color.lavender,
+        borderRadius: 4
     },
     uContainer: {
-        flex : 1,
-        marginEnd : 15,
-        marginStart : 15
+        flex: 1,
+        justifyContent: 'center',
+        alignContent: 'center',
+        alignItems: 'flex-start',
+        marginEnd: 15,
+        marginStart: 15,
     },
     tUserTitle: {
         fontSize: 16,
         color: Color.black,
+        fontWeight : 'bold',
         justifyContent: 'flex-start',
         alignItems: 'flex-start'
-    },
-    tUserDetail: {
-        fontSize: 14,
-        color: Color.gray,
     },
     imageuser: {
         width: 70,
         height: 70,
+        borderRadius: 4,
     }
 })
 

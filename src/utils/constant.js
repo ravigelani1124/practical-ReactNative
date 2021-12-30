@@ -12,7 +12,8 @@ export const ButtonStrings = {
 
 export const Routes = {
     Dashboard: 'Dashboard',
-    Login: 'Login'
+    Login: 'Login',
+    UserInfo:'UserInfo'
 }
 
 export const appString = {
@@ -21,7 +22,8 @@ export const appString = {
 
 export const placeHolderString = {
     EMAIL_ADDRESS: 'Enter Email Address',
-    PASSWORD: 'Please Enter Password'
+    PASSWORD: 'Please Enter Password',
+    LOAD_MORE: 'Load more'
 }
 export const validationString = {
     email_empty: 'Please enter email address',

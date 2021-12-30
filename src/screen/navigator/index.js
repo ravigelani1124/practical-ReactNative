@@ -5,16 +5,18 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from '../login';
 import { Routes } from '../../utils/constant';
 import DashboardScreen
- from '../dashboard';
+    from '../dashboard';
+import UserInfoScreen from '../userpersonal';
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
     return (
-        
+
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name={Routes.Login} component={LoginScreen} />
                 <Stack.Screen name={Routes.Dashboard} component={DashboardScreen} />
+                <Stack.Screen name={Routes.UserInfo} component={UserInfoScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
