@@ -1,9 +1,13 @@
 
 export const authDetails = {
-    baseURL: "https://dummyapi.io/data/v1/user",
+    baseURL: "https://dummyapi.io/data/v1/",
     appID: "61c46490b73b1ae6c46e37ff",
     GET: 'get',
     POST: 'post'
+}
+
+export const userDetailsStrings = {
+    userId :'userId'
 }
 
 export const ButtonStrings = {
@@ -17,7 +21,8 @@ export const Routes = {
 }
 
 export const appString = {
-    Login: 'Login'
+    Login: 'Login',
+    ProfileDetails : 'Profile Details'
 }
 
 export const placeHolderString = {

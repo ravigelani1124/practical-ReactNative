@@ -7,7 +7,8 @@ const Color = {
     azure: '#f0ffff',
     lavender: '#e6e6fa',
     lavenderDark: '#B57EDC',
-    ivory:'#fffff0'
+    ivory: '#fffff0',
+    cadetblue: '#5f9ea0'
 }
 
 export default Color

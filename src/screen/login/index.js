@@ -22,7 +22,10 @@ const LoginScreen = () => {
     const userSelector = useSelector((state) => state.userLoginReducer?.userLogin)
 
     useEffect(() => {
-        console.log(userSelector)
+        if (userSelector.user?.email != undefined || userSelector.user?.email != null) {
+            console.log(userSelector.user.email)
+            navigation.navigate(Routes.Dashboard)
+        }
     }, []);
 
 
@@ -42,7 +45,6 @@ const LoginScreen = () => {
             if (result.length > 0) {
                 if (result[0]?.password == password) {
                     setUser(result[0])
-                    navigation.navigate(Routes.Dashboard)
                 } else {
                     alert(validationString.password_valid)
                 }
@@ -52,23 +54,16 @@ const LoginScreen = () => {
         }
     }
 
-    //useEffect(() => {
+    useEffect(() => {
 
-    //     if (user)
-    //         dispatch(userLoginAction({
-    //             user
-    //         }))
-    //     navigation.navigate(Routes.Dashboard)
-    // }, [user]);
+        if (user)
+            dispatch(userLoginAction({
+                user
+            }))
+        navigation.navigate(Routes.Dashboard)
+    }, [user]);
 
-    // const gotoDashboard = (element) => {
-    //     console.log(element)
 
-    //     dispatch(userLoginAction({
-    //         element
-    //     }))
-    //     navigation.navigate(Routes.Dashboard)
-    // }
 
     return (
         <>

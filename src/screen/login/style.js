@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignContent: 'center',
-        backgroundColor: Color.ivory
+        backgroundColor: Color.white
     },
     input: {
         marginHorizontal: 20,
@@ -22,6 +22,8 @@ const styles = StyleSheet.create({
         fontSize: 30,
         paddingVertical: 2,
         marginBottom: 10,
+        fontWeight : 'bold',
+        color : Color.cadetblue
     },
     btnContainer: {
         marginHorizontal: 20,
@@ -29,12 +31,12 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: Color.aliceblue,
-        backgroundColor: Color.lavender,
+        backgroundColor: Color.cadetblue,
         borderRadius: 4,
     },
     btnText: {
         fontSize: 18,
+        color:Color.white,
         textAlign: 'center',
         fontWeight : 'bold'
     },

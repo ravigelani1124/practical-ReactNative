@@ -4,20 +4,20 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import styles from './styles';
 import ItemUserList from '../../component/itemuserlist';
 import { authDetails, Routes } from '../../utils/constant';
-import LoadMorePagination from '../../component/loadmore';
 import axios from 'axios';
 import { ActivityIndicator } from 'react-native';
+import { useNavigation } from "@react-navigation/core";
 
 const DashboardScreen = () => {
 
+  const navigation = useNavigation()
   const [userList, setUserList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   let tempList = []
 
   const handleNavigaiton = (item) => {
-    console.log("test")
-    navigation.navigate(Routes.UserInfo)
+    navigation.navigate(Routes.UserInfo, { userId: item.id })
   }
 
   const renderDashboardItem = (props) => {
@@ -30,26 +30,20 @@ const DashboardScreen = () => {
     try {
       const response = await axios({
         method: authDetails.GET,
+        url: 'user',
         baseURL: authDetails.baseURL,
         params: {
           page: currentPage,
           limit: 10
         },
         headers: { 'app-id': authDetails.appID }
+
       })
-      console.log("Response  :", response.data)
-
-      let arr = response.data?.data
-      let iterator = arr.values();
-
-      for (let elements of userList.values()) {
-        tempList.push(elements)
-      }
-      for (let elements of iterator) {
-        tempList.push(elements)
-      }
-      setUserList(tempList)
-      console.log(tempList.length)
+      console.log("RESPONSE DATA" + JSON.stringify(response.data.data))
+      let responseList = response.data.data
+      let dummylist = userList;
+      dummylist.push.apply(dummylist, responseList)
+      setUserList(dummylist)
       setIsLoading(false)
 
     } catch (error) {
@@ -82,8 +76,8 @@ const DashboardScreen = () => {
         showsVerticalScrollIndicator={false}
         renderItem={renderDashboardItem}
         onEndReachedThreshold={.5}
+        keyExtractor={item => item.id}
         onEndReached={onEndReachScroll}
-      //ListFooterComponent={LoadMorePagination}
       />
       <ActivityIndicator size='large' animating={isLoading} />
     </SafeAreaView>

@@ -3,7 +3,6 @@ import Color from "../../utils/color"
 
 const styles = StyleSheet.create({
     userContainer: {
-        
         marginTop: 10,
         marginStart: 20,
         marginEnd: 20,
@@ -11,8 +10,8 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         flexDirection: 'row',
         borderWidth: 1,
-        borderColor: Color.lavenderDark,
-        backgroundColor: Color.lavender,
+        borderColor: Color.cadetblue,
+        backgroundColor: Color.white,
         borderRadius: 4
     },
     uContainer: {
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     },
     tUserTitle: {
         fontSize: 16,
-        color: Color.black,
+        color: Color.cadetblue,
         fontWeight : 'bold',
         justifyContent: 'flex-start',
         alignItems: 'flex-start'
